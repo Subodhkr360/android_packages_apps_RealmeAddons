@@ -98,7 +98,7 @@ public class ChargingMonitorService extends Service {
     private final SharedPreferences.OnSharedPreferenceChangeListener mPrefListener =
             (prefs, key) -> {
                 if (PREF_ENABLED.equals(key)) {
-                    boolean enabled = prefs.getBoolean(PREF_ENABLED, true);
+                    boolean enabled = prefs.getBoolean(PREF_ENABLED, false);
                     Log.d(TAG, "Preference changed: enabled=" + enabled);
                     if (enabled) {
                         updateOverlayState();
@@ -295,6 +295,6 @@ public class ChargingMonitorService extends Service {
     }
 
     private boolean isEnabled() {
-        return mPrefs.getBoolean(PREF_ENABLED, true);
+        return mPrefs.getBoolean(PREF_ENABLED, false);
     }
 }

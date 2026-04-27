@@ -28,7 +28,7 @@
             android:key="charging_animation_enabled"
             android:title="@string/charging_animation_enable_title"
             android:summary="@string/charging_animation_enable_summary"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
 
         <ListPreference
             android:key="charging_animation_style"
